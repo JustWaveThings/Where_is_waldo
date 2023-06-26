@@ -1,6 +1,11 @@
 // this will hold the container that renders the image and an invisible grid of divs with event listeners
 import waldoImg from './img/findjohnoliver.jpg';
 
+export function clickCoord(click) {
+  console.log(click);
+  return click;
+}
+
 function waldoContainer() {
   // set height and width for 'waldo container' which the image and div will inherit
   // z-index will put image behind divs
@@ -29,8 +34,10 @@ function waldoContainer() {
       box.textContent = '';
       box.setAttribute('data-coord', `[${[i]}, ${[j]}]`);
       row.appendChild(box);
+      // eslint-disable-next-line no-loop-func
       box.addEventListener('click', e => {
-        console.log(e.target);
+        // console.log(e.target.dataset.coord);
+        clickCoord(e.target.dataset.coord);
       });
     }
   }
