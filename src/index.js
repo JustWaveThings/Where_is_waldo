@@ -3,10 +3,11 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-use-before-define */
 import './style.css';
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs, doc, query, where, orderBy, onSnapshot, deleteDoc, addDoc, serverTimestamp, updateDoc } from 'firebase/firestore';
+/* import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs, doc, query, where, orderBy, onSnapshot, deleteDoc, addDoc, serverTimestamp, updateDoc } from 'firebase/firestore'; */
+import waldoContainer from './waldo_container';
 
-const firebaseConfig = {
+/* const firebaseConfig = {
   apiKey: 'AIzaSyDHbAqh5qZOjfDBB4J4VnbcN6-gwBfdS3I',
   authDomain: 'library-add-firebase.firebaseapp.com',
   projectId: 'library-add-firebase',
@@ -18,3 +19,5 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 
 const db = getFirestore();
+ */
+waldoContainer();
