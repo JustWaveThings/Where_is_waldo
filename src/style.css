@@ -1,8 +1,9 @@
 .imageCont {
   display: flex;
   border: 5px solid rgb(0, 0, 0);
-  height: 1000px;
-  width: 1000px;
+  height: 5000px;
+  width: 3493px;
+  position: relative;
 }
 .row,
 .box {
@@ -10,7 +11,7 @@
   flex: 1 1;
 }
 .box {
-  outline: 0.5px solid grey;
+  outline: 0.1px solid rgba(128, 128, 128, 0.239);
 }
 .row {
   flex-direction: column;
@@ -22,4 +23,9 @@ body {
   flex: 1;
   flex-direction: column;
   align-items: center;
+}
+
+.waldoImg {
+  position: absolute;
+  z-index: -1;
 }
