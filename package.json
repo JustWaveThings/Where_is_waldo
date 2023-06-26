@@ -1,7 +1,7 @@
 {
-  "name": "library-with-firebase-baas",
+  "name": "where-is-waldo",
   "version": "1.0.0",
-  "description": "Adding Firebase BaaS to earlier project",
+  "description": "a photo tagging app using Firebase as BaaS",
   "main": ".src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
