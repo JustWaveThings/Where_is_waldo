@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable func-names */
 /* eslint-disable no-unused-expressions */
@@ -22,3 +23,4 @@ initializeApp(firebaseConfig);
 const db = getFirestore();
  */
 waldoContainer();
+// makeCharacterChoiceOnClick();
