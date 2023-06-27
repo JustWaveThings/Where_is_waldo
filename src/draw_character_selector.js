@@ -16,5 +16,6 @@ export default function drawCharacterSelector(characters, append) {
     button.appendChild(li);
     append.appendChild(button);
   });
+
   return displayListCharacters;
 }
