@@ -17,10 +17,21 @@ export default function makeCharacterChoiceOnClick(clickedCoords) {
   listContainer.style.backgroundColor = 'white';
   listContainer.style.top = '20px';
   listContainer.style.left = '40px';
-  listContainer.style.width = '10rem';
-  listContainer.style.height = '5rem';
+  /*   listContainer.style.width = '10rem';
+  listContainer.style.height = '5rem'; */
+  listContainer.style.display = 'flex';
+  listContainer.style.justifyContent = 'center';
+  listContainer.style.alignItems = 'center';
+  listContainer.style.padding = '.5rem 1rem';
   clickedDiv.appendChild(listContainer);
   const ul = document.createElement('ul');
+  ul.style.display = 'flex';
+  ul.style.justifyContent = 'space-evenly';
+  ul.style.gap = '1rem';
+  /*   ul.style.flexDirection = 'column'; */
+  ul.style.paddingInlineStart = '0px';
+  ul.style.alignItems = 'flex-start';
   listContainer.appendChild(ul);
+
   drawCharacterSelector(characterList, ul);
 }

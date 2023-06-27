@@ -29,3 +29,11 @@ body {
   position: absolute;
   z-index: -1;
 }
+
+.hit-false {
+  color: red;
+}
+
+.hit-true {
+  color: green;
+}
