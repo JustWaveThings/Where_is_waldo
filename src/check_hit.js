@@ -1,7 +1,7 @@
 import { parsedMushroomHits, parsedJohnHits, parsedWaldoHits } from './character_coordinates';
 
 export default function checkHit(playerInput, characterChosen = parsedJohnHits) {
-  console.log(playerInput, 'playerInput');
+  // console.log(playerInput, 'playerInput');
 
   const matchFirstPlayerInputCoord = characterChosen.filter(item => item[0] === playerInput[0]);
 

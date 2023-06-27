@@ -1,20 +1,26 @@
-import { clickCoord } from './waldo_container';
 import { parsedMushroomHits, parsedJohnHits, parsedWaldoHits } from './character_coordinates';
+import drawCharacterSelector from './draw_character_selector';
+import characterList from './character_list';
 
-// determine which character is chosen after user clicks on canvas
-// check if the clickCoord matches a coordinate of the parsed characters coordinate
-// return hit or miss
+// display character list on click of canvas. Hit property is there for styling purposes
 
-function makeCharacterChoiceOnClick() {
-  const characterList = [
-    { character: 'John Oliver', clicked: false },
-    { character: 'Waldo', clicked: false },
-    { character: 'Mushroom', clicked: false },
-  ];
+export default function makeCharacterChoiceOnClick(clickedCoords) {
+  // query clicked div and change positioning
+  const clickedDiv = document.querySelector(`div[data-coord-x='${clickedCoords[0]}'][data-coord-y='${clickedCoords[1]}']`);
+  clickedDiv.style.position = 'relative';
 
-  const mouseCanvas = document.querySelector('.imageCont');
-  const characterMenu = document.createElement('div');
-  characterMenu.className = 'ball';
-  mouseCanvas.appendChild(characterMenu);
+  // create menu container and append to the clicked div... but with relative positioning.
+  const listContainer = document.createElement('div');
+  listContainer.className = 'listContainer';
+  listContainer.style.position = 'absolute';
+  listContainer.setAttribute('display', 'flex');
+  listContainer.style.backgroundColor = 'white';
+  listContainer.style.top = '20px';
+  listContainer.style.left = '40px';
+  listContainer.style.width = '10rem';
+  listContainer.style.height = '5rem';
+  clickedDiv.appendChild(listContainer);
+  const ul = document.createElement('ul');
+  listContainer.appendChild(ul);
+  drawCharacterSelector(characterList, ul);
 }
-export default makeCharacterChoiceOnClick;

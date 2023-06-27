@@ -6,6 +6,7 @@
 
 /* import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, doc, query, where, orderBy, onSnapshot, deleteDoc, addDoc, serverTimestamp, updateDoc } from 'firebase/firestore'; */
+
 import './style.css';
 import waldoContainer from './waldo_container';
 
@@ -23,4 +24,3 @@ initializeApp(firebaseConfig);
 const db = getFirestore();
  */
 waldoContainer();
-// makeCharacterChoiceOnClick();

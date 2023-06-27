@@ -2,6 +2,7 @@
 import waldoImg from './img/findjohnoliver.jpg';
 import checkHit from './check_hit';
 import clickCoord from './click_coords';
+import makeCharacterChoiceOnClick from './character_choice';
 
 function waldoContainer() {
   const containerSize = 1000;
@@ -26,12 +27,19 @@ function waldoContainer() {
       const box = document.createElement('div');
       box.className = 'box';
       box.textContent = '';
-      box.setAttribute('data-coord-x', `${i}`);
-      box.setAttribute('data-coord-y', `${j}`);
+      box.setAttribute('data-coord-x', `${+i}`);
+      box.setAttribute('data-coord-y', `${+j}`);
       row.appendChild(box);
       // eslint-disable-next-line no-loop-func
       box.addEventListener('click', e => {
-        checkHit(clickCoord(e.target.dataset.coordX, e.target.dataset.coordY));
+        const { coordX } = e.target.dataset;
+        const { coordY } = e.target.dataset;
+        // need to select a character to check for hit
+        makeCharacterChoiceOnClick(clickCoord(coordX, coordY));
+        //
+
+        // check for hit on that character
+        checkHit(clickCoord(coordX, coordY));
       });
     }
   }
