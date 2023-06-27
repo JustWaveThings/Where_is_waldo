@@ -11,7 +11,7 @@
   flex: 1 1;
 }
 .box {
-  outline: 0.1px solid rgba(128, 128, 128, 0.239);
+  //outline: 0.1px solid rgba(128, 128, 128, 0.239);
 }
 .row {
   flex-direction: column;
