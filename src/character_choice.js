@@ -22,7 +22,7 @@ export default function makeCharacterChoiceOnClick(clickedCoords) {
   listContainer.style.display = 'flex';
   listContainer.style.justifyContent = 'center';
   listContainer.style.alignItems = 'center';
-  listContainer.style.padding = '.5rem 1rem';
+  listContainer.style.padding = '.5rem .5rem';
   listContainer.style.borderRadius = '.5rem';
   clickedDiv.appendChild(listContainer);
   const ul = document.createElement('ul');
