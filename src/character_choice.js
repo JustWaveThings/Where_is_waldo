@@ -14,7 +14,7 @@ export default function makeCharacterChoiceOnClick(windowCoords) {
   listContainer.setAttribute('display', 'flex');
   listContainer.style.backgroundColor = 'white';
   listContainer.style.top = `${windowCoords[1]}px`;
-  listContainer.style.left = `${windowCoords[0] - 360˝}px `;
+  listContainer.style.left = `${windowCoords[0] - 360}px `;
   listContainer.style.display = 'flex';
   listContainer.style.justifyContent = 'center';
   listContainer.style.alignItems = 'center';
