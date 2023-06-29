@@ -9,6 +9,7 @@ import { getFirestore, collection, getDocs, doc, query, where, orderBy, onSnapsh
 
 import './style.css';
 import waldoContainer from './waldo_container';
+import makeCharacterChoiceOnClick from './character_choice';
 
 /* const firebaseConfig = {
   apiKey: 'AIzaSyDHbAqh5qZOjfDBB4J4VnbcN6-gwBfdS3I',
@@ -24,3 +25,4 @@ initializeApp(firebaseConfig);
 const db = getFirestore();
  */
 waldoContainer();
+makeCharacterChoiceOnClick();

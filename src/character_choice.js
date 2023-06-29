@@ -4,7 +4,7 @@ import characterList from './character_list';
 
 // display character list on click of canvas. Hit property is there for styling purposes
 
-export default function makeCharacterChoiceOnClick(windowCoords) {
+export default function makeCharacterChoiceOnClick(windowCoords = [500, 500]) {
   const canvas = document.querySelector('.imageCont');
 
   // create menu container and append to the canvas... but with relative positioning and update the top / left values dynamically.
@@ -20,6 +20,7 @@ export default function makeCharacterChoiceOnClick(windowCoords) {
   listContainer.style.alignItems = 'center';
   listContainer.style.padding = '.5rem .5rem';
   listContainer.style.borderRadius = '.5rem';
+  listContainer.style.zIndex = ' -10';
   canvas.appendChild(listContainer);
 
   const ul = document.createElement('ul');

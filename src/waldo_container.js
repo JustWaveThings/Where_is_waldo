@@ -4,6 +4,7 @@ import checkHit from './check_hit';
 import clickCoord from './click_coords';
 import makeCharacterChoiceOnClick from './character_choice';
 import windowClickCoords from './window_click_coords';
+import updateWindowLocation from './update_window_location';
 
 function waldoContainer() {
   const containerSize = 1000;
@@ -16,7 +17,7 @@ function waldoContainer() {
 
   // add listener for container to track mouse clicks
 
-  imageCont.addEventListener('click', e => windowClickCoords(e), false);
+  imageCont.addEventListener('click', e => updateWindowLocation(windowClickCoords(e)), true);
 
   const canvasImage = document.createElement('img');
   canvasImage.src = waldoImg;
@@ -40,7 +41,7 @@ function waldoContainer() {
         const { coordX } = e.target.dataset;
         const { coordY } = e.target.dataset;
         // need to select a character to check for hit
-        makeCharacterChoiceOnClick(windowClickCoords(e));
+        // place list window where user clicks
 
         // check for hit on that character
         checkHit(clickCoord(coordX, coordY));
