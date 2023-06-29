@@ -11,7 +11,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    allowedHosts: ['.csb.app', 'localhost'],
+    allowedHosts: ['preview.csb.app', 'localhost'],
     // .preview.csb.app is the domain for CodeSandbox.io
     static: './dist',
     client: {
